@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Gift List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<div class="page-container">
+    <!-- Header section with title -->
+    <header>
+        <h1>Notre Cagnotte de Mariage</h1>
+    </header>
+
+    <!-- Section for project tiles -->
+    <section id="project-section">
+        <p>
+            Notre mode de vie Nomade avec Merellia a été révélateur sur notre vision de la vie, nos envie et le modèle
+            de famille que l'on veut former.
+            Ces deux années avec Merellia sont le début d'une suite d'aventure et comme vous les savez, nos idées ne
+            s'arrêtent jamais. Plutôt qu'une liste d'objets
+            qui ne rentre pas dans un sac à dos de Nomade, nous trouvons ça rigolo que vous participiez à notre prochain
+            projet.
+        </p>
+        <p>
+            Nous récoltons une cagnotte qui sera une aventure nomade en Van ou en Voilier, à vous de décider. La projet
+            qui récoltera le plus sera celui que nous
+            réaliserons.
+        </p>
+        <h2 class="title">Choisis le projet que tu veux nous voir réaliser !</h2>
+        <div id="projects-container">
+            <!-- Project tiles will be rendered here dynamically -->
+        </div>
+    </section>
+
+    <!-- Participation form -->
+    <section id="participation-section">
+        <form id="donation-form">
+            <p id="projectSelected">Tu n'as pas sélectionné de projet pour le moment.</p>
+
+            <div class="input-data">
+                <input type="text" name="name" id="name" required>
+                <div class="underline"></div>
+                <label for="name">Nom Prénom *</label>
+            </div>
+            <div class="input-data">
+                <input type="email" name="email" id="email" required>
+                <div class="underline"></div>
+                <label for="email">Email *</label>
+            </div>
+            <label for="message" id="messageLabel">Message privé</label>
+            <textarea id="message" name="message"
+                      placeholder="Merci Jeanne et Guillaume pour ce magnifique moment..."></textarea>
+            <p class="small">Jeanne et Guillaume recevront le message à la réception du paiement.</p>
+            <div class="input-data">
+                <input type="number" name="participation" id="participation" required>
+                <div class="underline"></div>
+                <label for="participation">Ta participation (en Euro) *</label>
+            </div>
+            <div class="sel">
+                <select name="payment-type" id="payment-type">
+                    <option value="" disabled>Moyen de Paiement</option>
+                    <option value="Virement bancaire">Virement Bancaire</option>
+                    <option value="Éspèces">Éspèces</option>
+                    <option value="Chèque">Chèque</option>
+                </select>
+            </div>
+            <button type="submit">Procéder au paiement</button>
+            <div class="alert">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                Aucun projet sélectionné. Clique sur le projet qui t'inspire le plus pour le sélectrionner.
+            </div>
+        </form>
+    </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
